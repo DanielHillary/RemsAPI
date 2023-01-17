@@ -3,6 +3,7 @@ package com.jovine.nafa.controller;
 import com.jovine.nafa.entity.Leagues;
 import com.jovine.nafa.entity.StandardResponse;
 import com.jovine.nafa.service.LeagueService;
+import com.jovine.nafa.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.*;
 public class LeagueController {
     @Autowired
     private LeagueService leagueService;
+    @Autowired
+    private UserService userService;
 
     @PostMapping("/createleague")
     public ResponseEntity<StandardResponse> createLeague(@RequestBody Leagues league){
