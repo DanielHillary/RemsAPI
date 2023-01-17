@@ -42,7 +42,7 @@ public class SwaggerConfig implements WebMvcConfigurer
 
     private ApiInfo metadata() {
         return new ApiInfoBuilder()
-                .title( "PsyDTrader WEB API for PsyD APP" )
+                .title( "Nafa API Documentaions" )
                 .description( "Documentation of the API for the Mobile and Web Developer" )
                 .version( "1.0.0" )
                 .build();
