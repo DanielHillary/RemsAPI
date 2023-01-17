@@ -81,7 +81,7 @@ public class CoachService {
             String uploadDir = "user-photos/" + savedUser.getCoachId();
 
             FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
-
+            System.out.println("Upload successfully");
             return StandardResponse.sendHttpResponse(true, "Successful");
         } catch (Exception e) {
             return StandardResponse.sendHttpResponse(false, "Could not upload image file");
