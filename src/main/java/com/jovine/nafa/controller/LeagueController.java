@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/leagues")
+@RequestMapping("/api/leagues")
 public class LeagueController {
     @Autowired
     private LeagueService leagueService;

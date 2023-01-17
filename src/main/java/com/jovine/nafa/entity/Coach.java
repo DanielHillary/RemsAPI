@@ -15,11 +15,14 @@ public class Coach {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long coachId;
-    private String coachName;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
+    private String coachUserName;
     private String coachTeam;
+    private String email;
     private String teamState;
     private String coachResidence;
-    private String coachNumber;
+    private String coachLiceneId;
     private String photos;
-    private String email;
 }

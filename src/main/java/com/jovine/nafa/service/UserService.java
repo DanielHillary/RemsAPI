@@ -150,5 +150,13 @@ public class UserService {
             return StandardResponse.sendHttpResponse(false, "Could not upload photo");
         }
     }
+
+    public ResponseEntity<StandardResponse> getUser(Long userId) {
+        try {
+            return StandardResponse.sendHttpResponse(true, "Successful", userRepo.findById(userId));
+        } catch (Exception e) {
+            return StandardResponse.sendHttpResponse(false, "Could not get user");
+        }
+    }
 }
 

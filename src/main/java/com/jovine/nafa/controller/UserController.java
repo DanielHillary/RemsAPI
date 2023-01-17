@@ -37,6 +37,35 @@ public class UserController {
         return userService.uploadPhoto(multipartFile);
     }
 
+    @PostMapping("/registeradmin")
+    public ResponseEntity<StandardResponse> registerAdmin(@RequestBody User adminUser){
+        return userService.registerNewAdmin(adminUser);
+    }
+
+    @GetMapping("/getallusers")
+    public ResponseEntity<StandardResponse> getAllUsers(){
+        return userService.getAllUsers();
+    }
+    @GetMapping("/getuser")
+    public ResponseEntity<StandardResponse> getUser(@RequestParam("userId") Long userId){
+        return userService.getUser(userId);
+    }
+
+    @DeleteMapping("/deleteuser")
+    public ResponseEntity<StandardResponse> deleteUser(@RequestParam("userId") Long userId){
+        return userService.deleteUser(userId);
+    }
+
+    @DeleteMapping("/deleteallusers")
+    public ResponseEntity<StandardResponse> deleteAllUsers(){
+        return userService.deleteAllUsers();
+    }
+
+    @PutMapping("/updateuser")
+    public ResponseEntity<StandardResponse> updateUser(@RequestBody User user){
+        return userService.updateUser(user);
+    }
+
     @GetMapping({"/forAdmin"})
     @PreAuthorize("hasRole('Admin')")
     public String forAdmin(){

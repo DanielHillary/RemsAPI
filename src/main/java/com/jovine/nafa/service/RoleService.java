@@ -63,4 +63,14 @@ public class RoleService {
             return StandardResponse.sendHttpResponse(false, "Could not assign role to user");
         }
     }
+
+    public ResponseEntity<StandardResponse> updateRole(Role role) {
+        try {
+            roleRepo.save(role);
+            return StandardResponse.sendHttpResponse(true, "Successful");
+        } catch (Exception e) {
+            return StandardResponse.sendHttpResponse(false, "Could not update role");
+        }
+        
+    }
 }

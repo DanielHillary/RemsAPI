@@ -18,6 +18,8 @@ public class Player {
     private String playerName;
     private String firstName;
     private String lastName;
+    private String email;
+    private String phoneNumber;
     private Long teamId;
     private int age;
     private String playerPosition;
