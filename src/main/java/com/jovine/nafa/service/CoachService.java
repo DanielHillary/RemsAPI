@@ -41,11 +41,11 @@ public class CoachService {
             user.setPhoneNumber(coach.getPhoneNumber());
             user.setUserName(coach.getCoachUserName());
 
-            Role role = roleRepository.findByRoleName("Player").get();
+            Role role = roleRepository.findByRoleName("Coach").get();
             Set<Role> roles = new HashSet<>();
             roles.add(role);
             user.setRole(roles);
-            user.setTag("Player");
+            user.setTag("Coach");
 
             userRepository.save(user);
             coachs = coachRepository.save(coach);
