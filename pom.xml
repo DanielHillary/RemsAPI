@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jovine</groupId>
-    <artifactId>nafa</artifactId>
+    <artifactId>REMS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>NafaSports</name>
-    <description>Project for Nafa Sports Federation</description>
+    <name>RemsAPI</name>
+    <description>Project for Jovine Real Estate Management</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -53,6 +53,17 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sendgrid</groupId>
+            <artifactId>sendgrid-java</artifactId>
+            <version>4.1.2</version>
         </dependency>
 
         <dependency>
